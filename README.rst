@@ -4,30 +4,38 @@ Mongrey Build
 
 Auto build for `Mongrey Project: <https://github.com/radical-software/mongrey>`_
 
-Build Process
-=============
+Build and Upload Process
+========================
 
 1. Make Docker image for all builds
 2. Run docker contenair
 3. By package (mongodb, postgresql, web, server, ...):
     1. Clone Mongrey Project
+    2. Install requirements (python and OS)
+    3. Generate binary for package
+4. Upload binaries to remote site (in release directory)
+5. Replace latest/ link to new release     
 
 Run Build
 =========
 
 ::
 
-    git clone https://github.com/radical-software/mongrey-build
+    $ git clone https://github.com/radical-software/mongrey-build
 
-    # mongrey release  
-    $ export PROJECT_VERSION=0.4.1
+    $ cd mongrey-build
+    
+    $ chmod +x docker-build.sh
 
-    $ ./docker-build.sh
+    $ PROJECT_VERSION=0.4.1 ./docker-build.sh
     
 Upload Project to remote host
 =============================
 
 ::
+
+    # mongrey release  
+    $ export PROJECT_VERSION=0.4.1
 
     # Host for upload binaries by fabric/ssh
     $ export FABRIC_REMOTE_HOST=YOUR_HOST
