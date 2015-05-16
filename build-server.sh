@@ -12,7 +12,7 @@ if [ "${BACKEND}" == "postgresql" ]; then
 fi
 
 SOURCE_BIN=mongrey_server_${BACKEND}.py
-TARGET_NAME=mongrey-server-${BACKEND}-Linux-x86_64
+TARGET_NAME=mongrey-server-${BACKEND}
 
 git clone ${REPO} || exit 1 
 

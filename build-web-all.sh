@@ -3,7 +3,7 @@
 [ -z "${REPO}" ] && exit 1
 
 SOURCE_BIN=mongrey_web.py
-TARGET_NAME=mongrey-web-Linux-x86_64
+TARGET_NAME=mongrey-web
 
 apt-get install -y libpq-dev
 apt-get install -y libmysqlclient-dev

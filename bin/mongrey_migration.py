@@ -39,5 +39,3 @@ from mongrey.storage.mongo.policy import MongoPolicy
 from mongrey.storage.mongo.utils import create_mongo_connection
 
 migration_main()
-web_main()
-server_main()

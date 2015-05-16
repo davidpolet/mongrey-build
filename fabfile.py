@@ -62,23 +62,23 @@ def upload():
     run('mkdir -vp %s' % env.project_path)
     
     """
-    mongrey-Linux-x86_64
-    mongrey-server-Linux-x86_64
-    mongrey-web-Linux-x86_64
+    mongrey-migration
+    mongrey-server
+    mongrey-web
 
-    mongrey-server-mongo-Linux-x86_64
-    mongrey-server-mysql-Linux-x86_64
-    mongrey-server-postgresql-Linux-x86_64
-    mongrey-server-sqlite-Linux-x86_64
+    mongrey-server-mongo
+    mongrey-server-mysql
+    mongrey-server-postgresql
+    mongrey-server-sqlite
 
-    mongrey-web-mongo-Linux-x86_64
-    mongrey-web-mysql-Linux-x86_64
-    mongrey-web-postgresql-Linux-x86_64
-    mongrey-web-sqlite-Linux-x86_64
+    mongrey-web-mongo
+    mongrey-web-mysql
+    mongrey-web-postgresql
+    mongrey-web-sqlite
     """
     #`pwd`:/code
     with lcd('/code/dist'):
-        put("mongrey*Linux-x86_64", env.project_path, mode=0644)
+        put("mongrey*", env.project_path, mode=0644)
 
     with cd(env.project_base_path):
         run("rm -vf latest")

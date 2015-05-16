@@ -21,6 +21,5 @@ done
 
 docker run -it --rm -e REPO=${REPO} -v `pwd`:/code/shared ${CT_NAME} /bin/bash /code/shared/build-server-all.sh 2>server-all.log 1>&2 || exit 1
 docker run -it --rm -e REPO=${REPO} -v `pwd`:/code/shared ${CT_NAME} /bin/bash /code/shared/build-web-all.sh 2>web-all.log 1>&2 || exit 1
-docker run -it --rm -e REPO=${REPO} -v `pwd`:/code/shared ${CT_NAME} /bin/bash /code/shared/build-all.sh 2>all.log 1>&2 || exit 1
 
 docker run -it --rm -e REPO=${REPO} -v `pwd`:/code/shared ${CT_NAME} /bin/bash /code/shared/build-migration.sh 2>migration.log 1>&2 || exit 1
