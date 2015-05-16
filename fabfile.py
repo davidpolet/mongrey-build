@@ -39,7 +39,7 @@ env.password = FABRIC_REMOTE_PASSWORD
 env.project = 'mongrey'
 env.project_version = os.environ.get('PROJECT_VERSION', None)
 
-env.project_base_path = "%s/%s" % (FABRIC_REMOTE_PATH, env.project)
+env.project_base_path = FABRIC_REMOTE_PATH #"%s/%s" % (FABRIC_REMOTE_PATH, env.project)
 env.project_path = "%s/%s" % (env.project_base_path, env.project_version)
 env.project_path_latest = "%s/latest" % env.project_base_path
 env.project_nginx_user = "root:nobody"
