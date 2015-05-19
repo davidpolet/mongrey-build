@@ -5,7 +5,7 @@
 REPO=https://github.com/radical-software/mongrey.git
 CT_NAME=radical-software/mongrey-build
 
-docker build --rm -t $CT_NAME .
+docker build --rm -t $CT_NAME . || exit 1
 
 declare -a BACKENDS
 BACKENDS[0]="mongo"
