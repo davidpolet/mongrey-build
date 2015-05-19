@@ -28,7 +28,8 @@ RUN curl -k -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm -
 
 RUN useradd -d /home/user -m -s /bin/bash user
 
-RUN pip install cython python-gevent
+RUN pip install cython
+RUN pip install gevent
 RUN pip install --force-reinstall https://github.com/pyinstaller/pyinstaller/tarball/develop
 RUN pip install wheel
 
