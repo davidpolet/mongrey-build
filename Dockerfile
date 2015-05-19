@@ -14,9 +14,10 @@ RUN apt-get update -q -y && \
      curl \
      language-pack-en \
      python-dev \
-     cython \
-     python-gevent \
      fabric
+
+#cython \
+#python-gevent \
   
 ENV PATH /usr/local/bin:${PATH}
 ENV LANG en_US.UTF-8
@@ -27,6 +28,7 @@ RUN curl -k -O https://bootstrap.pypa.io/get-pip.py && python get-pip.py && rm -
 
 RUN useradd -d /home/user -m -s /bin/bash user
 
+RUN pip install cython python-gevent
 RUN pip install --force-reinstall https://github.com/pyinstaller/pyinstaller/tarball/develop
 RUN pip install wheel
 
