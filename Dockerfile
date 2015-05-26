@@ -16,9 +16,6 @@ RUN apt-get update -q -y && \
      python-dev \
      fabric
 
-#cython \
-#python-gevent \
-  
 ENV PATH /usr/local/bin:${PATH}
 ENV LANG en_US.UTF-8
 

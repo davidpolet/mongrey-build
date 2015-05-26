@@ -24,4 +24,6 @@ su -l user -c "/usr/local/bin/pyinstaller --strip --clean --additional-hooks-dir
 
 /code/shared/dist/$TARGET_NAME --help || exit 1
 
+pip freeze > /code/shared/dist/${TARGET_NAME}-requirements.txt
+
 exit 0

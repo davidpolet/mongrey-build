@@ -23,6 +23,3 @@ docker run -it --rm -e REPO=${REPO} -v `pwd`:/code/shared ${CT_NAME} /bin/bash /
 docker run -it --rm -e REPO=${REPO} -v `pwd`:/code/shared ${CT_NAME} /bin/bash /code/shared/build-web-all.sh 2>web-all.log 1>&2 || exit 1
 
 docker run -it --rm -e REPO=${REPO} -v `pwd`:/code/shared ${CT_NAME} /bin/bash /code/shared/build-migration.sh 2>migration.log 1>&2 || exit 1
-
-docker run -it --rm -e REPO=${REPO} -v `pwd`:/code/shared ${CT_NAME} /bin/bash /code/shared/build-install-command.sh 2>install-command.log 1>&2 || exit 1
-

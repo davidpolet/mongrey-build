@@ -79,6 +79,8 @@ def upload():
     #`pwd`:/code
     with lcd('/code/dist'):
         put("mongrey*", env.project_path, mode=0644)
+        #mongrey-server-requirements.txt
+        #mongrey-web-requirements.txt
 
     with cd(env.project_base_path):
         run("rm -vf latest")
