@@ -4,11 +4,11 @@
 [ -z "${REPO}" ] && exit 1
 
 if [ "${BACKEND}" == "mysql" ]; then
-    apt-get install -y libmysqlclient-dev
+    apt-get install -y libmysqlclient-dev || exit 1
 fi
 
 if [ "${BACKEND}" == "postgresql" ]; then
-    apt-get install -y libpq-dev
+    apt-get install -y libpq-dev || exit 1
 fi
 
 SOURCE_BIN=mongrey_web_${BACKEND}.py

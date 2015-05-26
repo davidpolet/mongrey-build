@@ -5,8 +5,8 @@
 SOURCE_BIN=mongrey_web.py
 TARGET_NAME=mongrey-web
 
-apt-get install -y libpq-dev
-apt-get install -y libmysqlclient-dev
+apt-get install -y libpq-dev || exit 1
+apt-get install -y libmysqlclient-dev || exit 1
 
 git clone ${REPO} || exit 1 
 
