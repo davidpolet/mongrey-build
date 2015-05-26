@@ -4,9 +4,12 @@ MAINTAINER <stephane.rault@radicalspam.org>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-ENV GEVENT_RESOLVER ares
+#ENV GEVENT_RESOLVER ares
+
+ADD sources.list /etc/apt/sources.list
 
 RUN apt-get update -q -y && \
+    apt-get dist-upgrade -y --no-install-recommends && \
     apt-get install -y --no-install-recommends \
      build-essential \
      ca-certificates \
